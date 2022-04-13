@@ -1,0 +1,876 @@
+/** IMPORT'S FILES **/
+/** COLORS **/
+/** Transitions **/
+/** SCREEN TO WEB RESPONSIVE **/
+/** Testing code **/
+/** Cor da borda de fundo do menu das estatisticas **/
+/** Calculos usados para o responsive */
+/** Caculos para o painel do administrador **/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+@keyframes writing-animation {
+  from {
+    width: 0;
+  }
+}
+@keyframes news-hover-animation {
+  0% {
+    left: -180px;
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes videos-opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.00;
+  }
+  100% {
+    opacity: 1.00;
+  }
+}
+@keyframes nav-menu-opened {
+  from {
+    width: 380px;
+    height: 0;
+  }
+  to {
+    width: 380px;
+    height: 550px;
+  }
+}
+@keyframes nav-menu-closed {
+  from {
+    width: 380px;
+    height: 550px;
+  }
+  to {
+    width: 380px;
+    height: 0;
+  }
+}
+/** PT SANS - GOOGLE FONTS **/
+/* line 6, ../../resources/assets/sass/main.scss */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 11, ../../resources/assets/sass/main.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 15, ../../resources/assets/sass/main.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 21, ../../resources/assets/sass/main.scss */
+header.header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 220px;
+  background: #465082;
+}
+/* line 27, ../../resources/assets/sass/main.scss */
+header.header div.partners {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+}
+/* line 35, ../../resources/assets/sass/main.scss */
+header.header div.logo {
+  padding: 0 20%;
+  height: 180px;
+  background: url("../images/cdcpriscos.png") 10% 50% no-repeat;
+  background-size: auto 130%;
+}
+/* line 40, ../../resources/assets/sass/main.scss */
+header.header div.logo p {
+  position: relative;
+  top: 35%;
+  font-size: 43px;
+  text-transform: uppercase;
+  color: white !important;
+}
+@media screen and (min-device-width: 600px) {
+  /* line 40, ../../resources/assets/sass/main.scss */
+  header.header div.logo p {
+    font-size: 36px;
+  }
+}
+
+/* line 53, ../../resources/assets/sass/main.scss */
+nav.navigation {
+  background: #465082;
+}
+/* line 55, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom {
+  position: relative;
+  background: #465082;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 45px;
+  transition: height 0.4s ease-in-out;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+/* line 67, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom.navbar-fixed {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  background: #465082;
+  z-index: 50;
+  border-top: #465082;
+  transition: all 0.8s ease-in-out;
+}
+/* line 76, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse {
+  text-align: center !important;
+}
+/* line 78, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav {
+  display: inline-block;
+  float: none;
+}
+/* line 81, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li {
+  margin: 0;
+  padding: 0;
+}
+/* line 84, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li a {
+  margin: 0 !important;
+  padding: 16px 24px;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+/* line 89, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li a:hover {
+  color: #465082 !important;
+  background: white;
+  transition: all 0.4s ease-in-out;
+}
+/* line 94, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li a.active {
+  color: #465082 !important;
+  background: white;
+  transition: all 0.4s ease-in-out;
+}
+/* line 99, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li a[aria-expanded="true"] {
+  color: #465082;
+  background: white;
+  transition: all 0.4s ease-in-out;
+}
+/* line 105, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  top: 47px;
+  border: 0 !important;
+  box-shadow: 0 !important;
+  background: #465082;
+  transition: all 0.4s ease-in-out;
+}
+/* line 114, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li ul.dropdown-menu li a {
+  font-weight: bold;
+}
+/* line 116, ../../resources/assets/sass/main.scss */
+nav.navigation div.navbar-custom div.collapse ul.navbar-nav li ul.dropdown-menu li a:hover {
+  color: #465082 !important;
+  transition: all 0.4s ease-in-out;
+}
+
+/* line 129, ../../resources/assets/sass/main.scss */
+div.carousel {
+  position: relative;
+  top: -17px;
+  margin: -5px 0;
+  max-width: 100%;
+}
+/* line 134, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner {
+  width: 100%;
+  max-height: 730px;
+}
+/* line 137, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner .carousel-caption {
+  margin: 3px;
+  position: absolute;
+  top: 3px;
+  left: 3%;
+}
+/* line 142, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner .carousel-caption h3 {
+  color: white;
+  padding: 15px 20px;
+  background: black;
+  float: left;
+  font-weight: bold;
+}
+/* line 149, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner .carousel-caption p {
+  padding: 15px 20px;
+  position: absolute;
+  top: 120px;
+  left: 230px;
+  font-size: 120%;
+  color: white;
+  background: black;
+  font-weight: bold;
+  float: left;
+}
+/* line 161, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner button.button-read-more {
+  padding: 12px 20px;
+  position: absolute;
+  top: 260px;
+  left: 150px;
+  color: white;
+  background: #465082;
+  border-radius: 0;
+  border: 0;
+  font-size: 90%;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.4s ease-in-out;
+}
+/* line 175, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner button.button-read-more:hover {
+  cursor: pointer;
+  color: #465082;
+  background: white;
+  transition: background 0.4s ease-in-out;
+}
+/* line 181, ../../resources/assets/sass/main.scss */
+div.carousel .carousel-inner button.button-read-more:focus {
+  outline: none;
+}
+
+/* line 188, ../../resources/assets/sass/main.scss */
+section.last-news {
+  padding: 6px 15%;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 40px;
+  background: #f0f0f0;
+}
+/* line 195, ../../resources/assets/sass/main.scss */
+section.last-news p {
+  font-size: 150%;
+  font-weight: bold;
+}
+/* line 198, ../../resources/assets/sass/main.scss */
+section.last-news p.news {
+  position: relative;
+  top: -40px;
+  left: 16%;
+  width: 60em;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: normal !important;
+}
+@media screen and (min-device-width: 600px) {
+  /* line 198, ../../resources/assets/sass/main.scss */
+  section.last-news p.news {
+    left: 18.5%;
+  }
+}
+/* line 210, ../../resources/assets/sass/main.scss */
+section.last-news p.news-writting {
+  animation: writing-animation 3.5s steps(60, end);
+}
+/* line 213, ../../resources/assets/sass/main.scss */
+section.last-news p i {
+  margin-right: 8px;
+}
+
+/* line 220, ../../resources/assets/sass/main.scss */
+section.home {
+  margin: 2% 0;
+  clear: both;
+}
+/* line 223, ../../resources/assets/sass/main.scss */
+section.home section.news {
+  margin: 0 auto;
+  width: 88%;
+  text-align: center;
+}
+/* line 227, ../../resources/assets/sass/main.scss */
+section.home section.news div.new {
+  margin: 15px;
+  width: 30.43333%;
+  height: 280px;
+  background: white;
+  box-shadow: 3px 3px 3px #999;
+  text-align: left;
+  float: left;
+  opacity: 1;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(1) {
+  animation: fadeIn calc(1 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(2) {
+  animation: fadeIn calc(2 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(3) {
+  animation: fadeIn calc(3 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(4) {
+  animation: fadeIn calc(4 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(5) {
+  animation: fadeIn calc(5 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(6) {
+  animation: fadeIn calc(6 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(7) {
+  animation: fadeIn calc(7 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(8) {
+  animation: fadeIn calc(8 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(9) {
+  animation: fadeIn calc(9 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(10) {
+  animation: fadeIn calc(10 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(11) {
+  animation: fadeIn calc(11 * 0.6s) ease-in-out;
+}
+/* line 237, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:nth-child(12) {
+  animation: fadeIn calc(12 * 0.6s) ease-in-out;
+}
+/* line 241, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:hover {
+  position: relative;
+  cursor: pointer;
+}
+/* line 244, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:hover button {
+  left: 0;
+  opacity: 1;
+  animation: news-hover-animation 0.4s ease-in-out;
+}
+/* line 249, ../../resources/assets/sass/main.scss */
+section.home section.news div.new:hover div {
+  width: 80%;
+  height: 80%;
+  transition: all 0.4s ease-in-out;
+}
+/* line 255, ../../resources/assets/sass/main.scss */
+section.home section.news div.new button {
+  color: white;
+  padding: 8px;
+  position: relative;
+  top: 8px;
+  left: -180px;
+  width: 120px;
+  font: 13px "PT Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #465082;
+  border: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+/* line 271, ../../resources/assets/sass/main.scss */
+section.home section.news div.new div {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  top: -32.5px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  z-index: 0;
+}
+/* line 281, ../../resources/assets/sass/main.scss */
+section.home section.news div.new p {
+  color: white;
+  padding: 8px 8px;
+  position: relative;
+  top: -72px;
+  width: 100%;
+  text-align: left;
+  font: 14px "PT Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(180, 180, 180, 0.8);
+}
+
+/* line 297, ../../resources/assets/sass/main.scss */
+section.ads {
+  position: relative;
+  top: 100px;
+  margin: 8% 0;
+  width: 100%;
+  height: 180px;
+  text-align: center;
+  background: transparent;
+  clear: both;
+}
+
+/* line 308, ../../resources/assets/sass/main.scss */
+section.videos {
+  padding: 30px 0;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  width: 100%;
+  height: auto;
+  clear: both;
+}
+/* line 316, ../../resources/assets/sass/main.scss */
+section.videos h3 {
+  text-align: center;
+  font: 28px "PT Sans", sans-serif;
+  font-weight: bold;
+}
+/* line 320, ../../resources/assets/sass/main.scss */
+section.videos h3 i {
+  margin-right: 10px;
+}
+/* line 324, ../../resources/assets/sass/main.scss */
+section.videos hr {
+  position: relative;
+  left: 28.5%;
+  width: 20%;
+  display: inline-block;
+}
+/* line 329, ../../resources/assets/sass/main.scss */
+section.videos hr:nth-child(3) {
+  width: 3%;
+  height: 1px;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background: #465082;
+}
+/* line 337, ../../resources/assets/sass/main.scss */
+section.videos div.videos {
+  padding: 45px 0;
+  margin: 3% 0 !important;
+  position: relative;
+  left: 0;
+  width: 200% !important;
+  height: 500px;
+  text-align: left;
+  background: transparent url("../images/videos.bg.png") 50% 50%;
+}
+/* line 346, ../../resources/assets/sass/main.scss */
+section.videos div.videos div.video {
+  margin-bottom: 2%;
+  margin-right: 1.7%;
+  position: relative;
+  width: 15.53867% !important;
+  height: 180px;
+  float: left !important;
+  animation: videos-opacity-animation 0.6s ease-in-out;
+  opacity: 1;
+}
+/* line 355, ../../resources/assets/sass/main.scss */
+section.videos div.videos div.video div.video-caption {
+  padding: 15px;
+  position: relative;
+  top: -3px;
+  width: 100%;
+  background: white;
+  border-bottom: 2px solid rgba(200, 200, 200, 0.6);
+  color: #666;
+  font-size: 110%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+/* line 368, ../../resources/assets/sass/main.scss */
+section.videos div.videos div.video:last-child {
+  margin-right: 0;
+}
+@media screen and (min-device-width: 800px) {
+  /* line 346, ../../resources/assets/sass/main.scss */
+  section.videos div.videos div.video {
+    width: 612.5px;
+    height: 340px;
+  }
+}
+/* line 375, ../../resources/assets/sass/main.scss */
+section.videos div.videos div.video#video-hide {
+  display: none;
+}
+/* line 378, ../../resources/assets/sass/main.scss */
+section.videos div.videos div.video iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 383, ../../resources/assets/sass/main.scss */
+section.videos div.videos button {
+  position: absolute;
+  top: -5%;
+  left: 48%;
+  color: white;
+  padding: 8px 12px;
+  font-size: 18px;
+  background: #465082;
+  border-radius: 50%;
+  box-shadow: 0;
+}
+/* line 393, ../../resources/assets/sass/main.scss */
+section.videos div.videos button:hover {
+  cursor: pointer;
+}
+/* line 398, ../../resources/assets/sass/main.scss */
+section.videos div.buttons {
+  position: relative;
+  top: -120px;
+  width: 100%;
+  text-align: center;
+}
+/* line 403, ../../resources/assets/sass/main.scss */
+section.videos div.buttons .button {
+  margin: 2px 5px;
+  padding: 6px 12px;
+  color: #323232;
+  background: white;
+  border: 0;
+  box-shadow: 0 1px 1px #666;
+}
+/* line 410, ../../resources/assets/sass/main.scss */
+section.videos div.buttons .button i {
+  color: #323232;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 415, ../../resources/assets/sass/main.scss */
+section.videos div.buttons .button.button-videos-prev {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+/* line 419, ../../resources/assets/sass/main.scss */
+section.videos div.buttons .button.button-videos-show {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+/* line 423, ../../resources/assets/sass/main.scss */
+section.videos div.buttons .button.button-videos-hide {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+/* line 431, ../../resources/assets/sass/main.scss */
+section.social {
+  margin: 8% 0;
+  width: 100%;
+  height: 680px;
+  text-align: center;
+}
+/* line 436, ../../resources/assets/sass/main.scss */
+section.social h3 {
+  margin-bottom: 2% !important;
+  color: black;
+  font-size: 180%;
+  font-weight: bold;
+}
+/* line 442, ../../resources/assets/sass/main.scss */
+section.social div.search {
+  margin: 2% 0;
+  width: 100%;
+  text-align: center;
+  clear: both;
+}
+/* line 447, ../../resources/assets/sass/main.scss */
+section.social div.search div.buttons {
+  position: relative;
+  top: -35px;
+  left: 35%;
+  width: 20%;
+  z-index: 5;
+}
+/* line 453, ../../resources/assets/sass/main.scss */
+section.social div.search div.buttons button {
+  margin-left: 5%;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0;
+  background: gainsboro;
+  border: 0px solid;
+  display: inline-block;
+  transition: all 0.8s ease-in-out;
+}
+/* line 464, ../../resources/assets/sass/main.scss */
+section.social div.search div.buttons button:nth-child(1) {
+  width: 85px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+/* line 470, ../../resources/assets/sass/main.scss */
+section.social div.search div.buttons button:hover {
+  background: #465082;
+  transition: all 0.8s ease-in-out;
+  outline: 0;
+}
+/* line 475, ../../resources/assets/sass/main.scss */
+section.social div.search div.buttons button i {
+  color: white;
+}
+/* line 481, ../../resources/assets/sass/main.scss */
+section.social div.search input {
+  position: relative;
+  top: -67px;
+  left: 54%;
+  margin-left: 1%;
+  padding: 3px 20px;
+  border: 1.5px solid gainsboro;
+  box-shadow: 0;
+  border-radius: 20px;
+  color: #465082;
+  transition: all 0.8s ease-in-out;
+  float: left;
+}
+/* line 493, ../../resources/assets/sass/main.scss */
+section.social div.search input:focus {
+  outline: 0;
+}
+/* line 496, ../../resources/assets/sass/main.scss */
+section.social div.search input:hover {
+  border-color: #465082;
+  transition: all 0.8s ease-in-out;
+  outline: 0;
+}
+/* line 503, ../../resources/assets/sass/main.scss */
+section.social div.social-post {
+  width: 260px;
+  height: auto;
+  background: #969696;
+  display: inline-block;
+  vertical-align: bottom;
+  clear: both;
+}
+/* line 511, ../../resources/assets/sass/main.scss */
+section.social p.post {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 517, ../../resources/assets/sass/main.scss */
+section.social p.page {
+  position: relative;
+  top: 15px;
+  padding: 15px;
+  text-align: center;
+  background: #646464;
+}
+/* line 523, ../../resources/assets/sass/main.scss */
+section.social p.page a {
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 527, ../../resources/assets/sass/main.scss */
+section.social p.page span.dateofpost {
+  color: #c8c8c8;
+  text-align: center;
+}
+/* line 532, ../../resources/assets/sass/main.scss */
+section.social div.buttons {
+  width: 100%;
+  text-align: center;
+}
+/* line 535, ../../resources/assets/sass/main.scss */
+section.social div.buttons .button {
+  margin: 15px;
+  padding: 6px 12px;
+  color: white;
+  background: #465082;
+  border: 0;
+}
+/* line 541, ../../resources/assets/sass/main.scss */
+section.social div.buttons .button img {
+  width: 12px;
+  height: 12px;
+}
+
+/* line 549, ../../resources/assets/sass/main.scss */
+section.footer {
+  padding: 0;
+  margin: 8% 0;
+  width: 100%;
+  height: 680px;
+  text-align: center;
+}
+/* line 555, ../../resources/assets/sass/main.scss */
+section.footer hr {
+  position: relative;
+  left: 8%;
+  margin: 11% 3%;
+  width: 30%;
+  height: 2px;
+  border: 0;
+  color: #465082;
+  background: #465082;
+  float: left;
+  text-align: center;
+}
+/* line 566, ../../resources/assets/sass/main.scss */
+section.footer hr.right {
+  float: right;
+}
+@media screen and (min-device-width: 800px) {
+  /* line 555, ../../resources/assets/sass/main.scss */
+  section.footer hr {
+    left: 10%;
+  }
+}
+/* line 573, ../../resources/assets/sass/main.scss */
+section.footer div.branding {
+  margin: 2% 0;
+  position: relative;
+  top: 55px;
+  width: 180px;
+  height: 220px;
+  background: transparent url("../images/cdcpriscos.png") 50% 50% no-repeat;
+  background-size: 200%;
+  float: left;
+  text-align: center;
+}
+@media screen and (min-device-width: 800px) {
+  /* line 573, ../../resources/assets/sass/main.scss */
+  section.footer div.branding {
+    left: 10%;
+  }
+}
+/* line 588, ../../resources/assets/sass/main.scss */
+section.footer section.partners {
+  width: 100%;
+  height: 200px;
+  clear: left;
+}
+/* line 592, ../../resources/assets/sass/main.scss */
+section.footer section.partners h3 {
+  color: #465082;
+  font: 22px "PT Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 598, ../../resources/assets/sass/main.scss */
+section.footer section.partners div.partners-branding {
+  margin: 0 auto;
+  width: 60%;
+}
+/* line 601, ../../resources/assets/sass/main.scss */
+section.footer section.partners div.partners-branding div {
+  margin: 30px 40px;
+  display: inline-block;
+}
+
+/* line 611, ../../resources/assets/sass/main.scss */
+div.signIn {
+  padding: 22px;
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  background: pink;
+}
+/* line 617, ../../resources/assets/sass/main.scss */
+div.signIn form {
+  margin: 0 auto;
+  width: 80%;
+}
+/* line 620, ../../resources/assets/sass/main.scss */
+div.signIn form div {
+  margin-top: 15px;
+}
+/* line 622, ../../resources/assets/sass/main.scss */
+div.signIn form div input {
+  font: 14px "PT Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase !important;
+}
+
+/* line 634, ../../resources/assets/sass/main.scss */
+div.contacts {
+  width: 100%;
+  height: 300px;
+  background: rgba(230, 230, 230, 0.7);
+}
+/* line 638, ../../resources/assets/sass/main.scss */
+div.contacts div.logo {
+  margin: 15px auto;
+  width: 300px;
+  height: 200px;
+  background: transparent url("../images/cdcpriscos.png") 50% 50% no-repeat;
+  background-size: 40% auto;
+}
+
+/* line 648, ../../resources/assets/sass/main.scss */
+footer.footer {
+  margin: 1% auto;
+  position: relative;
+  top: 50px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  clear: both;
+}
+
+/** Scrollbar **/
+/* line 661, ../../resources/assets/sass/main.scss */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* line 665, ../../resources/assets/sass/main.scss */
+::-webkit-scrollbar-thumb {
+  background: #464646;
+}
+
+/* line 669, ../../resources/assets/sass/main.scss */
+::-webkit-scrollbar-track-piece {
+  background: #c8c8c8;
+}

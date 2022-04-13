@@ -1,0 +1,58 @@
+@keyframes writing-animation {
+  from { width: 0; }
+}
+
+@keyframes news-hover-animation {
+  0% {
+    left: -180px;
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes videos-opacity-animation{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.00;
+  }
+
+  100% {
+    opacity: 1.00;
+  }
+}
+
+@keyframes nav-menu-opened {
+   from {
+     width: 380px;
+     height : 0;
+   }
+
+   to {
+     width: 380px;
+     height: 550px;
+   }
+ }
+
+@keyframes nav-menu-closed {
+ from {
+    width: 380px;
+    height: 550px;
+  }
+
+ to {
+    width: 380px;
+    height : 0;
+  }
+}

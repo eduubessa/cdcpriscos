@@ -1,0 +1,40 @@
+
+/** COLORS **/
+$black : rgba(0,0,0,1);
+$white : rgba(255, 255, 255 , 1);
+$light_blue : rgba(131, 144, 212, 1);
+$dark_blue : rgba(70, 80, 130, 1);
+$dark_gray : rgba(100,100,100,1);
+$light_gray : rgba(220, 220, 220, 1);
+
+/** Transitions **/
+$transition_faster : all 0.2s ease-in-out;
+$transition_normal : all 0.4s ease-in-out;
+$transition_slow : all 0.8s ease-in-out;
+
+
+/** SCREEN TO WEB RESPONSIVE **/
+$large_screen : 800px;
+$medium_screen : 600px;
+
+/** Testing code **/
+$colour1: rgb(255,255,255); // white
+$colour2: rgb(255,0,0); // red
+$colour3: rgb(135,206,250); // sky blue
+$colour4: rgb(255,255,0);   // yellow
+
+/** Cor da borda de fundo do menu das estatisticas **/
+$statistic_menu_colors_1: rgba(180,80,80,1);
+$statistic_menu_colors_2 : rgba(80,180,80,1);
+$statistic_menu_colors_3 : rgba(80,80,180,1);
+$statistic_menu_colors_4 : rgba(80,80,180,1);
+
+/** Calculos usados para o responsive */
+$news_width : (100%/3);
+$news_width : ($news_width - 2.9%);
+$videos_width : (200%/12);
+$videos_width : ($videos_width - 1.128%);
+
+/** Caculos para o painel do administrador **/
+$sidebar_width: 16%;
+$admin_content_width : (100% - $sidebar_width);

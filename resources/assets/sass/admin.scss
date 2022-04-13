@@ -1,0 +1,67 @@
+@import "fonts";
+@import "variables";
+@import "animations";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+div.admin {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  header.admin-header {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #337ab7;
+    ul {
+      position: absolute;
+      right: 1%;
+      li {
+        display: inline-block;
+        a {
+          padding: 11px 12px;
+          display: block;
+          &:hover {
+            background: #FFF;
+            transition: $transition_slow;
+            i {
+              color: #337ab7;
+            }
+          }
+          i {
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+  section.admin-sidebar {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 16%;
+    height: 94.68%;
+    background: #337ab7;
+    float: left;
+  }
+  section.admin-content {
+    padding: 22px;
+    margin: 0;
+    position: relative;
+    top: 50px;
+    right: 0px;
+    width: $admin_content_width;
+    min-height: 100%;
+    float: right;
+  }
+}

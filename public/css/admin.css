@@ -1,0 +1,138 @@
+/** PT SANS - GOOGLE FONTS **/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+/** COLORS **/
+/** Transitions **/
+/** SCREEN TO WEB RESPONSIVE **/
+/** Testing code **/
+/** Cor da borda de fundo do menu das estatisticas **/
+/** Calculos usados para o responsive */
+/** Caculos para o painel do administrador **/
+@keyframes writing-animation {
+  from {
+    width: 0;
+  }
+}
+@keyframes news-hover-animation {
+  0% {
+    left: -180px;
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes videos-opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.00;
+  }
+  100% {
+    opacity: 1.00;
+  }
+}
+@keyframes nav-menu-opened {
+  from {
+    width: 380px;
+    height: 0;
+  }
+  to {
+    width: 380px;
+    height: 550px;
+  }
+}
+@keyframes nav-menu-closed {
+  from {
+    width: 380px;
+    height: 550px;
+  }
+  to {
+    width: 380px;
+    height: 0;
+  }
+}
+/* line 5, ../../resources/assets/sass/admin.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 10, ../../resources/assets/sass/admin.scss */
+div.admin {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+/* line 15, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #337ab7;
+}
+/* line 24, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul {
+  position: absolute;
+  right: 1%;
+}
+/* line 27, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul li {
+  display: inline-block;
+}
+/* line 29, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul li a {
+  padding: 11px 12px;
+  display: block;
+}
+/* line 32, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul li a:hover {
+  background: #FFF;
+  transition: all 0.8s ease-in-out;
+}
+/* line 35, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul li a:hover i {
+  color: #337ab7;
+}
+/* line 39, ../../resources/assets/sass/admin.scss */
+div.admin header.admin-header ul li a i {
+  color: #FFF;
+}
+/* line 46, ../../resources/assets/sass/admin.scss */
+div.admin section.admin-sidebar {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 16%;
+  height: 94.68%;
+  background: #337ab7;
+  float: left;
+}
+/* line 57, ../../resources/assets/sass/admin.scss */
+div.admin section.admin-content {
+  padding: 22px;
+  margin: 0;
+  position: relative;
+  top: 50px;
+  right: 0px;
+  width: 84%;
+  min-height: 100%;
+  float: right;
+}
