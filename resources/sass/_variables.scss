@@ -6,4 +6,108 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-$blue_primary: #465082;
+$blue_primary: #2c3e50;
+
+.bg-blue {
+    background: $blue_primary;
+}
+
+.btn {
+    padding: 8px 22px !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 0 !important;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.btn-primary {
+    border: 2px solid $blue_primary !important;
+    background: $blue_primary !important;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        color: $blue_primary !important;
+        background: #fff !important;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.border-1 {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.btn-social {
+    margin: 8px 0;
+    width: 100%;
+    padding: 16px 22px !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+}
+
+.btn-facebook {
+    color: #fff !important;
+    background-color: #4A6EA8 !important;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/640px-Facebook-icon-1.png');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+    border: 1px solid #4267B2 !important;
+}
+
+.btn-google {
+    color: #333;
+    border: 1px solid #bbb !important;
+    background-color: #fff;
+    background-image: url('data:image/png;base64,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');
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+}
+
+.btn-email {
+    color: #fff !important;
+    background: $blue_primary !important;
+    border: 1px solid $blue_primary !important;
+}
+
+.input-login-register {
+    padding: 18px !important;
+}
+
+.btn-github {
+    background-color: #fff !important;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/25/25231.png");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+    border: 1px solid #24292E !important;
+}
+
+.btn-twitter {
+    color: #fff !important;
+    background-color: #00ACED !important;
+    background-image: url("https://t.ctcdn.com.br/_pO9rE3KYs3V-ODpJsxRFcZ67lI=/400x400/smart/filters:format(webp)/i489929.jpeg");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+    border: 1px solid #00ACED !important;
+}
+
+.select-footer {
+    color: #fff;
+    padding: 10px 22px;
+    width: 180px;
+    background: rgba(80,80,80,1);
+}

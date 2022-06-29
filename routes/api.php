@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/page/{page}', [\App\Http\Controllers\Api\PageApiController::class, 'show']);
+Route::get('/slides', [\App\Http\Controllers\Api\SlideApiController::class, 'index']);
+Route::get('/posts', [\App\Http\Controllers\Api\PostApiController::class, 'index']);

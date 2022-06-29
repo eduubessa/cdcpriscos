@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\Constants\SliderInterface;
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostApiController extends Controller
@@ -15,6 +17,13 @@ class PostApiController extends Controller
     public function index()
     {
         //
+        $posts = Post::all();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Fetch all posts',
+            'posts' => $posts
+        ]);
     }
 
     /**

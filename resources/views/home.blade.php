@@ -2,17 +2,50 @@
 
 @section('content')
 
-    <!-- SLIDER -->
-    @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VARIABLE) == \App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VALUE_ENABLED)
-        <slider-component />
-    @endif
-    <!-- SLIDER -->
+    <main class="main">
+        <!-- SLIDER -->
+        @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VALUE_ENABLED)
+            <section class="slider" id="slider">
+                <slider-component data="{{ $slides }}"></slider-component>
+            </section>
+        @endif
+        <!-- SLIDER -->
 
-    <!-- LAST NEWS -->
-    @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_LASTNEWS_HOMEPAGE_STATUS_VARIABLE) == \App\Helpers\Constants\OptionInterface::OPTION_LASTNEWS_HOMEPAGE_STATUS_VALUE_ENABLED)
-        <LastnewsComponent />
-    @endif
-    <!-- LAST NEWS -->
+        <!-- LAST NEWS -->
+        @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VALUE_ENABLED)
+            <section class="last-news pt-5">
+                <div class="container">
+                    <h3 class="title mb-5">{{ __('pages.home.titles.news') }}</h3>
+                    <last-news-component data="{{ $lastnews }}"></last-news-component>
+                </div>
+            </section>
+        @endif
+        <!-- LAST NEWS -->
+
+        <!-- LAST NEWS -->
+        @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VALUE_ENABLED)
+            <section class="shedule pt-5">
+                <div class="container">
+                    <div class="row">
+                        <h4>Agenda</h4>
+                        <hr/>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <calendar-component></calendar-component>
+                        </div>
+                        <div class="col-md-4 bg-blue text-white py-5 text-center">
+                            <h1>26</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+
+                </div>
+            </section>
+        @endif
+        <!-- LAST NEWS -->
+    </main>
 
     {{--    <main class="main">--}}
     {{--        <section class="home">--}}

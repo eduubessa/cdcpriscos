@@ -4,6 +4,7 @@ namespace App\Http\Controllers\View;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PageViewController extends Controller
 {
@@ -13,7 +14,12 @@ class PageViewController extends Controller
     public function home()
     {
         //
-        return view('home');
+        $slides = Http::get(url('/api/slides'));
+        $lastnews = Http::get(url('/api/posts'));
+
+        return view('home')
+            ->withSlides($slides->body())
+            ->withLastnews($lastnews->body());
     }
 
     /**

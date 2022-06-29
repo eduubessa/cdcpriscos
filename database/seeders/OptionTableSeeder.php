@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Helpers\Constants\SliderInterface;
 use App\Models\Option;
 use Illuminate\Database\Seeder;
 use App\Helpers\Constants\OptionInterface;
@@ -79,6 +80,20 @@ class OptionTableSeeder extends Seeder
         $option->description = "Mostrar ou esconder notícias ao minuto na página inicial";
         $option->variable = OptionInterface::OPTION_LASTNEWS_HOMEPAGE_STATUS_VARIABLE;
         $option->value = OPtionInterface::OPTION_LASTNEWS_HOMEPAGE_STATUS_VALUE_ENABLED;
+        $option->save();
+
+        $option = new Option();
+        $option->name = "Limitador do slider";
+        $option->description = "Número de slides a apresentar no slider";
+        $option->variable = SliderInterface::SLIDE_LIMITER_VARIABLE;
+        $option->value = SliderInterface::SLIDE_LIMITER_VALUE;
+        $option->save();
+
+        $option = new Option();
+        $option->name = "Calendário na página inicial";
+        $option->description = "Apresentar calendários com os eventos na página inicial";
+        $option->variable = OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VARIABLE;
+        $option->value = OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VALUE_ENABLED;
         $option->save();
     }
 }

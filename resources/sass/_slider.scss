@@ -1,54 +1,33 @@
 #slider {
     margin: 0;
     width: auto;
-    height: 80vh;
-    background: #333;
+    height: 65vh;
     overflow: hidden;
-    .item[data-slider='slide-1']{
-        .item-content {
-            overflow: hidden;
-            position: relative;
-            height: 100%;
-            img {
-                width: auto;
-                height: 100%;
-                position: relative;
-                z-index: 1;
-                left: 50%;
-                transform: translateX(-50%) scale(1.4);
-                opacity: .4;
-                filter: blur(50px) saturate(3);
-            }
-        }
-    }
-    @for $i from 2 through 30 {
-        .item[data-slider='slide-#{$i}'] {
+    .slide {
+        position: relative;
+        width: 100%;
+        height: 65vh;
+        background: red;
+        .slide-image {
             position: absolute;
-            z-index: 11;
-            top: 50%;
-            left: 50%;
-            width: 50%;
-            height: 0%;
-            padding-bottom: 35%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 10px 40px rgba(0,0,0,.4);
-            :before {
-                content: '';
-                position: absolute;
-                left: -1%;
-                bottom: -1%;
-                width: 102%;
-                height: 50%;
-                background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0));
-                z-index: 1;
-                pointer-events: none;
-            }
-            .item-content {
-                height: 0;
-                padding-bottom: 16%;
-                transform: scale(1.02);
-                background: #333;
-            }
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        .slide-content {
+            color: #fff;
+            padding: 5vh 18px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(0,0,0,.5);
+            box-shadow: 0 0 10px #666;
         }
     }
 }

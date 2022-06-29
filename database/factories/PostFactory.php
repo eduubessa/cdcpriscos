@@ -21,6 +21,7 @@ class PostFactory extends Factory
 
         return [
             //
+            'author' => 3,
             'cover' => $this->faker->imageUrl,
             'title' => $title,
             'description' => $this->faker->realText(75),

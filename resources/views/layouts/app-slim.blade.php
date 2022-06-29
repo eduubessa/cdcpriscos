@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"><!-- CSRF Token -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<![LINKS]>-->
-    <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <link type="text/css" href="{{ asset('/css/app.css') }}" rel="stylesheet" />
     <!--<![SCRIPTS]>-->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!--<![TITLE]>-->
@@ -15,19 +15,18 @@
 <body>
 <div id="app">
     <!-- Header -->
-    <header class="header">
-        <div class="brand">
-            <a href="#">
-                <img src="{{ asset('images/logo.png') }}" alt="{{ SITE_OPTION(\App\Helpers\Constants\OptionInterface::SITE_TITLE_VARIABLE) }}">
-                {{ SITE_OPTION(\App\Helpers\Constants\OptionInterface::SITE_TITLE_VARIABLE) }}
-            </a>
-        </div>
+    <header class="header-slim">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-brand brand">
+                <a href="#">
+                    <img src="{{ asset('images/logo.png') }}" alt="{{ SITE_OPTION(\App\Helpers\Constants\OptionInterface::SITE_TITLE_VARIABLE) }}">
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarMainOfPortal" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMainOfPortal">
-                <ul class="navbar-nav ms-auto me-auto flex-nowrap">
+                <ul class="navbar-nav ms-auto flex-nowrap">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">{{ __('navigation.navbar.home') }}</a>
                     </li>

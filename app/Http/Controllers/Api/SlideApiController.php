@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\Constants\SliderInterface;
 use App\Http\Controllers\Controller;
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class SlideApiController extends Controller
@@ -15,6 +17,15 @@ class SlideApiController extends Controller
     public function index()
     {
         //
+        $slides = Slide::orderBy('id', 'desc')
+            ->limit(SliderInterface::SLIDE_LIMITER_VALUE)
+            ->get();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Fetch all slides limited to ' . SliderInterface::SLIDE_LIMITER_VALUE,
+            'slides' => $slides
+        ]);
     }
 
     /**

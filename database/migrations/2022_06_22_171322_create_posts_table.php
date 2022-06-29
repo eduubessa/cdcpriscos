@@ -22,6 +22,8 @@ return new class extends Migration
             $table->longText('body');
             $table->string('status')->default(\App\Helpers\Constants\PostInterface::POST_STATUS_RECENT);
             $table->string('slug')->unique();
+            $table->boolean('published')->default(true);
+            $table->boolean('draft')->default(false);
             $table->timestamps();
         });
     }

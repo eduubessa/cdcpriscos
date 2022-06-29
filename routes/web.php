@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\View\PageViewController::class, 'home'])->name('page.index');
 Route::get('/home', [\App\Http\Controllers\View\PageViewController::class, 'home'])->name('page.home');
+
+Route::prefix('auth')->group(function () {
+   Route::get('/sign-in/{mode?}', [\App\Http\Controllers\View\Auth\LoginViewController::class, 'showForm']);
+   Route::get('/sign-out/{mode?}', [\App\Http\Controllers\View\Auth\RegisterViewController::class, 'showForm']);
+});
