@@ -15735,6 +15735,40 @@ textarea.form-control-lg {
   box-shadow: 0 0 10px #666;
 }
 
+.schedule .weekdays {
+  padding: 18px;
+  box-sizing: content-box;
+  justify-content: space-between;
+  display: flex;
+}
+.schedule .weekdays .weekday {
+  text-align: center;
+  padding: 8px 12px;
+}
+.schedule .weekdays-numb {
+  grid-template-columns: 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857%;
+  grid-template-rows: auto;
+  display: grid;
+}
+.schedule .weekdays-numb .weekday-numb {
+  cursor: pointer;
+  color: rgba(44, 62, 80, 0.85);
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid rgba(44, 62, 80, 0.13);
+}
+.schedule .weekdays-numb .weekday-numb.weekday-month-prev, .schedule .weekdays-numb .weekday-numb.weekday-month-next {
+  cursor: default;
+  color: rgba(80, 80, 80, 0.75);
+  font-weight: normal;
+  background: rgba(220, 220, 220, 0.45) !important;
+}
+.schedule .weekdays-numb .weekday-numb.today {
+  color: #fff;
+  background: rgba(44, 62, 80, 0.55);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15821,8 +15855,8 @@ header.header-slim .navbar .navbar-nav {
   margin: 0;
 }
 header.header-slim .navbar .navbar-nav .nav-item a {
-  padding: 26px 16px;
   color: #fff;
+  padding: 26px 16px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;

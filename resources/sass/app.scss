@@ -15,6 +15,8 @@
 
 @import 'slider';
 
+@import 'calendar';
+
 * {
     box-sizing: border-box;
 }
@@ -106,8 +108,8 @@ header.header-slim {
             margin: 0;
             .nav-item {
                 a {
-                    padding: 26px 16px;
                     color: #fff;
+                    padding: 26px 16px;
                     text-decoration: none;
                     text-transform: uppercase;
                     font-weight: bold;

@@ -24,7 +24,7 @@
 
         <!-- LAST NEWS -->
         @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VALUE_ENABLED)
-            <section class="shedule pt-5">
+            <section class="schedule pt-5">
                 <div class="container">
                     <div class="row">
                         <h4>Agenda</h4>
