@@ -15,8 +15,9 @@
         @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VALUE_ENABLED)
             <section class="last-news pt-5">
                 <div class="container">
-                    <h3 class="title mb-5">{{ __('pages.home.titles.news') }}</h3>
-                    <last-news-component data="{{ $lastnews }}"></last-news-component>
+                    <h4>{{ __('pages.home.titles.news') }}</h4>
+                    <hr class="mb-3" />
+                    <last-news-component class="mt-5" data="{{ $lastnews }}"></last-news-component>
                 </div>
             </section>
         @endif
@@ -26,21 +27,7 @@
         @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VALUE_ENABLED)
             <section class="schedule pt-5">
                 <div class="container">
-                    <div class="row">
-                        <h4>Agenda</h4>
-                        <hr/>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <calendar-component></calendar-component>
-                        </div>
-                        <div class="col-md-4 bg-blue text-white py-5 text-center">
-                            <h1>26</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-
+                   <calendar-component></calendar-component>
                 </div>
             </section>
         @endif

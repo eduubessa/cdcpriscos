@@ -5410,6 +5410,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'calendar-component',
   data: function data() {
@@ -5417,6 +5468,8 @@ __webpack_require__.r(__webpack_exports__);
       year: new Date().getFullYear(),
       month: null,
       current_day: new Date(),
+      months: [],
+      weekdays: [],
       monthdays: {
         prev: [],
         current: [],
@@ -5429,10 +5482,10 @@ __webpack_require__.r(__webpack_exports__);
     var first_month_day = new Date(this.current_day.getFullYear(), this.current_day.getMonth(), 1);
     var last_month_day = new Date(this.current_day.getFullYear(), this.current_day.getMonth() + 1, 0);
     var last_prev_month_day = new Date(this.current_day.getFullYear(), this.current_day.getMonth(), 0);
-    var months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-    var weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
-    this.month = months[this.current_day.getMonth()];
-    this.weekday = weekdays[first_month_day.getDay() - 1];
+    this.months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    this.weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
+    this.month = this.months[this.current_day.getMonth()];
+    this.weekday = this.weekdays[first_month_day.getDay() - 1];
     var last_days_prev_month = [];
     var a = last_month_day;
 
@@ -5448,7 +5501,7 @@ __webpack_require__.r(__webpack_exports__);
       this.monthdays.prev.push(y);
     }
 
-    for (var k = last_month_day.getDay(); k < weekdays.length; k++) {
+    for (var k = last_month_day.getDay(); k < this.weekdays.length; k++) {
       this.monthdays.next.push(new Date(a.setDate(a.getDate() + 1)).getDate());
     }
   },
@@ -28309,71 +28362,104 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("header", { staticClass: "calendar-header" }, [
-      _c("div", { staticClass: "row mt-3" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-8 text-center" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c("h5", [_vm._v(_vm._s(_vm.year))]),
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-8" }, [
+      _c("h4", [_vm._v("Agenda")]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("header", { staticClass: "calendar-header" }, [
+        _c("div", { staticClass: "row mt-5" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8 text-center" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("h5", [_vm._v(_vm._s(_vm.year))]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("h3", { staticClass: "title" }, [_vm._v(_vm._s(_vm.month))]),
+              ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c("h3", { staticClass: "title" }, [_vm._v(_vm._s(_vm.month))]),
-            ]),
-          ]),
+          _vm._m(1),
         ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "calendar-container" }, [
+        _vm._m(2),
         _vm._v(" "),
-        _vm._m(1),
+        _c(
+          "div",
+          { staticClass: "weekdays-numb" },
+          [
+            _vm._l(_vm.monthdays.prev, function (day) {
+              return _c(
+                "div",
+                {
+                  key: "weekday-last-month-" + day,
+                  staticClass: "weekday-numb weekday-month-prev",
+                },
+                [_vm._v(_vm._s(day))]
+              )
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.monthdays.current, function (day) {
+              return _c(
+                "div",
+                {
+                  key: "weekday-" + day,
+                  class: {
+                    "weekday-numb": true,
+                    today: day === _vm.current_day.getDate(),
+                  },
+                },
+                [_vm._v(_vm._s(day))]
+              )
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.monthdays.next, function (day) {
+              return _c(
+                "div",
+                {
+                  key: "weekday-next-" + day,
+                  staticClass: "weekday-numb weekday-month-next",
+                },
+                [_vm._v(_vm._s(day))]
+              )
+            }),
+          ],
+          2
+        ),
       ]),
     ]),
     _vm._v(" "),
-    _c("section", { staticClass: "calendar-container" }, [
-      _vm._m(2),
+    _c("div", { staticClass: "col-md-4" }, [
+      _c("h4", [_vm._v("Eventos")]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "weekdays-numb" },
-        [
-          _vm._l(_vm.monthdays.prev, function (day) {
-            return _c(
-              "div",
-              {
-                key: "weekday-last-month-" + day,
-                staticClass: "weekday-numb weekday-month-prev",
-              },
-              [_vm._v(_vm._s(day))]
-            )
-          }),
+      _c("hr"),
+      _vm._v(" "),
+      _c("section", { staticClass: "events" }, [
+        _c("div", { staticClass: "row mt-3" }, [
+          _c("small", [
+            _vm._v(
+              _vm._s(_vm.weekdays[_vm.current_day.getDay() - 1]) +
+                ", " +
+                _vm._s(_vm.current_day.getDate()) +
+                " de " +
+                _vm._s(_vm.months[_vm.current_day.getMonth()]) +
+                " de " +
+                _vm._s(_vm.current_day.getFullYear())
+            ),
+          ]),
           _vm._v(" "),
-          _vm._l(_vm.monthdays.current, function (day) {
-            return _c(
-              "div",
-              {
-                key: "weekday-" + day,
-                class: { "weekday-numb": true, today: day === 29 },
-              },
-              [_vm._v(_vm._s(day))]
-            )
-          }),
-          _vm._v(" "),
-          _vm._l(_vm.monthdays.next, function (day) {
-            return _c(
-              "div",
-              {
-                key: "weekday-next-" + day,
-                staticClass: "weekday-numb weekday-month-next",
-              },
-              [_vm._v(_vm._s(day))]
-            )
-          }),
-        ],
-        2
-      ),
+          _vm._m(3),
+        ]),
+      ]),
     ]),
   ])
 }
@@ -28392,7 +28478,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-2" }, [
+    return _c("div", { staticClass: "col-md-2 text-right" }, [
       _c("button", { staticClass: "btn btn-transparent" }, [
         _c("i", { staticClass: "fa fa-chevron-right fa-2x" }),
       ]),
@@ -28416,6 +28502,72 @@ var staticRenderFns = [
       _c("div", { staticClass: "weekday" }, [_vm._v("Sáb")]),
       _vm._v(" "),
       _c("div", { staticClass: "weekday" }, [_vm._v("Dom")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "events-list py-3" }, [
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("CDC Priscos - SC Braga")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("18:00h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("SL Benfica - CDC Priscos")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("21:30h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("CDC Priscos - SC Braga")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("18:00h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("SL Benfica - CDC Priscos")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("21:30h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("CDC Priscos - SC Braga")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("18:00h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("h3", [_vm._v("SL Benfica - CDC Priscos")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("21:30h - Bilhetes já há venda nos locais habituais"),
+          ]),
+        ]),
+      ]),
     ])
   },
 ]

@@ -15768,6 +15768,28 @@ textarea.form-control-lg {
   color: #fff;
   background: rgba(44, 62, 80, 0.55);
 }
+.schedule section.events {
+  height: auto;
+}
+.schedule section.events ul {
+  max-height: 450px;
+  overflow-x: scroll;
+}
+.schedule section.events ul li {
+  padding: 0;
+  list-style: none;
+}
+.schedule section.events ul li a {
+  padding: 20px 18px 5px 18px;
+  color: #2c3e50;
+  text-decoration: none;
+  display: block;
+  transition: all 0.4s ease-in-out;
+}
+.schedule section.events ul li:hover a {
+  color: #fff;
+  background: #2c3e50;
+}
 
 * {
   box-sizing: border-box;

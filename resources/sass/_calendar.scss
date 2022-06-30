@@ -37,4 +37,27 @@
             }
         }
     }
+    section.events {
+        height: auto;
+        ul {
+            max-height: 450px;
+            overflow-x: scroll;
+            li {
+                padding: 0;
+                list-style: none;
+                a {
+                    padding: 20px 18px 5px 18px;
+                    color: $blue_primary;
+                    text-decoration: none;
+                    display: block;
+                    transition: all .4s ease-in-out;
+                }
+                &:hover a {
+                    color: #fff;
+                    background: $blue_primary;
+                }
+            }
+        }
+    }
 }
+
