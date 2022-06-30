@@ -14,10 +14,22 @@ class PostApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $posts = Post::all();
+        $query = $request->query->all();
+
+        $limit = array_key_exists('limit', $query) === true ? $query['limit'] : 6;
+        $paginate = array_key_exists('paginate', $query) === true ? $query['paginate'] : 0;
+
+        $posts = Post::orderBy('created_at', 'desc');
+
+        if($paginate === "1" || $paginate === "true")
+        {
+            $posts = $posts->paginate($limit);
+        }else{
+            $posts = $posts->limit($limit)->get();
+        }
 
         return response()->json([
             'status' => 200,

@@ -17,7 +17,8 @@ class SlideApiController extends Controller
     public function index()
     {
         //
-        $slides = Slide::orderBy('id', 'desc')
+
+        $slides = Slide::orderBy('created_at', 'desc')
             ->limit(SliderInterface::SLIDE_LIMITER_VALUE)
             ->get();
 

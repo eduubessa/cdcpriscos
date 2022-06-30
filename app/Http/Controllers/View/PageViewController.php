@@ -14,7 +14,10 @@ class PageViewController extends Controller
     public function home()
     {
         //
-        $slides = Http::get(url('/api/slides'));
+        $slides = Http::timeout(60)->get(url('/api/slides'));
+
+        $slides->throw();
+
         $lastnews = Http::get(url('/api/posts'));
 
         return view('home')
