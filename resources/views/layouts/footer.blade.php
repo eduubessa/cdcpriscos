@@ -39,7 +39,32 @@
                 <hr width="100%" />
             </div>
             <div class="col-md-6 offset-3">
-                <p>Segue-nos nas redes sociais</p>
+                <div class="row">
+                    <p>Segue-nos nas redes sociais</p>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col col-md-1 offset-4 text-center">
+                        <a href="#">
+                            <i class="fa fa-facebook fa-1x mr-2"></i>
+                        </a>
+                    </div>
+                    <div class="col col-md-1 text-center">
+                        <a href="#">
+                            <i class="fa fa-twitter fa-1x mr-2"></i>
+                        </a>
+                    </div>
+                    <div class="col col-md-1 text-center">
+                        <a href="#">
+                            <i class="fa fa-instagram fa-1x mr-2"></i>
+                        </a>
+                    </div>
+                    <div class="col col-md-1 text-center">
+                        <a href="#">
+                            <i class="fa fa-linkedin fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -5909,8 +5909,6 @@ textarea.form-control-lg {
   margin-left: 0.255em;
   vertical-align: 0.255em;
   content: "";
-}
-.dropstart .dropdown-toggle::after {
   display: none;
 }
 .dropstart .dropdown-toggle::before {
@@ -15980,4 +15978,9 @@ footer.footer p {
   margin-top: 20px;
   text-align: center !important;
   font-weight: bold;
+}
+footer.footer a {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 22px;
 }

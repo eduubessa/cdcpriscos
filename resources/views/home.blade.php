@@ -11,6 +11,17 @@
         @endif
         <!-- SLIDER -->
 
+        <!-- LAST RESULTS -->
+        @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_LAST_RESULTS_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_LAST_RESULTS_HOMEPAGE_STATUS_VALUE_ENABLED)
+            <section class="last-results pt-5">
+                <div class="container">
+                    <h4>{{ __('pages.home.titles.results') }}</h4>
+                    <last-results-component class="mt-5"></last-results-component>
+                </div>
+            </section>
+        @endif
+        <!-- LAST RESULTS -->
+
         <!-- LAST NEWS -->
         @if(SITE_OPTION(\App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VARIABLE) === \App\Helpers\Constants\OptionInterface::OPTION_SLIDER_HOMEPAGE_STATUS_VALUE_ENABLED)
             <section class="last-news pt-5">

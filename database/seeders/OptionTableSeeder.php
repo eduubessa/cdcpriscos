@@ -95,5 +95,12 @@ class OptionTableSeeder extends Seeder
         $option->variable = OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VARIABLE;
         $option->value = OptionInterface::OPTION_CALENDAR_HOMEPAGE_STATUS_VALUE_ENABLED;
         $option->save();
+
+        $option = new Option();
+        $option->name = "Resultados na página inicial";
+        $option->description = "Apresentar o último resultado do último jogo na pagina inicial.";
+        $option->variable = OptionInterface::OPTION_LAST_RESULTS_HOMEPAGE_STATUS_VARIABLE;
+        $option->value = OptionInterface::OPTION_LAST_RESULTS_HOMEPAGE_STATUS_VALUE_ENABLED;
+        $option->save();
     }
 }
