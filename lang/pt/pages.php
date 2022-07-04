@@ -5,7 +5,7 @@ return [
         "titles" => [
             "news" => "Notícias",
             "calendar" => "Calendário",
-            "results" => "Último Jogo: Resumo"
+            "results" => "Último Jogo: resumo"
         ]
     ]
 ];
